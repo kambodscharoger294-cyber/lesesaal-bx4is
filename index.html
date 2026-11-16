@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lesesaal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <h1>Lesesaal</h1>
+  <p class="subtitle">Private Lese- und Hörproben.</p>
+</header>
+
+<nav class="work-tabs" id="work-tabs">
+  <button class="tab active" data-work="holographic">Holographic Principle</button>
+  <button class="tab" data-work="law-without-law">Law without Law</button>
+</nav>
+
+<main>
+
+<!-- ================= HOLOGRAPHIC PRINCIPLE ================= -->
+<section class="work active" id="holographic">
+  <h2>The Physical Meaning of the Holographic Principle</h2>
+
+  <article class="card">
+    <h3>Peeling Back the 3D Interface – Perception and the Holographic Screen</h3>
+    <audio controls preload="none" src="assets/holographic/peeling-back-the-3d-interface.m4a"></audio>
+    <div class="links">
+      <a class="btn read" href="assets/holographic/peeling-back-the-3d-interface.pdf" target="_blank" rel="noopener">Slides lesen (PDF)</a>
+      <a class="btn dl" href="assets/holographic/peeling-back-the-3d-interface.pdf" download>PDF laden</a>
+      <a class="btn dl" href="assets/holographic/peeling-back-the-3d-interface.m4a" download>Audio laden</a>
+    </div>
+    <details class="pdf-view">
+      <summary>PDF-Slides zum Podcast – im Browser anzeigen</summary>
+      <iframe src="assets/holographic/peeling-back-the-3d-interface.pdf" title="PDF: Peeling Back the 3D Interface" loading="lazy"></iframe>
+    </details>
+  </article>
+
+  <article class="card standalone">
+    <h3>Bericht: Hamburg, July 2014</h3>
+    <div class="links">
+      <a class="btn read" href="assets/holographic/bericht-hamburg-july-2014.pdf" target="_blank" rel="noopener">Lesen (PDF)</a>
+      <a class="btn dl" href="assets/holographic/bericht-hamburg-july-2014.pdf" download>Download</a>
+    </div>
+    <details class="pdf-view">
+      <summary>PDF im Browser anzeigen</summary>
+      <iframe src="assets/holographic/bericht-hamburg-july-2014.pdf" title="PDF: Bericht Hamburg, July 2014" loading="lazy"></iframe>
+    </details>
+  </article>
+
+  <div class="sources">
+    <h3>Quellen</h3>
+    <ul>
+      <li>Chris Fields, James F. Glazebrook, Antonino Marciano, <em>The physical meaning of the holographic principle</em> (arXiv:2210.16021, 2022 – nur als Quelle genannt, nicht zum Download angeboten)</li>
+      <li>Kenan Oggad, James F. Glazebrook, Chris Fields, <em>What an observer reads off a holographic screen</em> (arXiv:2611.11356, 2026 – nur als Quelle genannt, nicht zum Download angeboten)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= LAW WITHOUT LAW ================= -->
+<section class="work" id="law-without-law">
+  <h2>Law without Law <span class="byline">~ Markus Müller ~</span></h2>
+
+  <article class="card">
+    <h3>From the Void to Universal Order – The Fibonacci Genesis and Algorithmic Reality</h3>
+    <audio controls preload="none" src="assets/law-without-law/from-the-void-to-universal-order.m4a"></audio>
+    <div class="links">
+      <a class="btn read" href="assets/law-without-law/algorithmic-reality.pdf" target="_blank" rel="noopener">Slides lesen (PDF)</a>
+      <a class="btn dl" href="assets/law-without-law/algorithmic-reality.pdf" download>PDF laden</a>
+      <a class="btn dl" href="assets/law-without-law/from-the-void-to-universal-order.m4a" download>Audio laden</a>
+    </div>
+    <details class="pdf-view">
+      <summary>PDF-Slides zum Podcast – im Browser anzeigen</summary>
+      <iframe src="assets/law-without-law/algorithmic-reality.pdf" title="PDF: Algorithmic Reality" loading="lazy"></iframe>
+    </details>
+  </article>
+
+  <article class="card standalone">
+    <h3>Bericht</h3>
+    <div class="links">
+      <a class="btn read" href="assets/law-without-law/bericht.pdf" target="_blank" rel="noopener">Lesen (PDF)</a>
+      <a class="btn dl" href="assets/law-without-law/bericht.pdf" download>Download</a>
+    </div>
+    <details class="pdf-view">
+      <summary>PDF im Browser anzeigen</summary>
+      <iframe src="assets/law-without-law/bericht.pdf" title="PDF: Bericht" loading="lazy"></iframe>
+    </details>
+  </article>
+
+  <div class="sources">
+    <h3>Quellen</h3>
+    <ul>
+      <li>Markus Müller, <em>Law without law: from observer states to physics via algorithmic information theory</em> (Original-Paper; nur als Quelle genannt, nicht zum Download angeboten)</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Alle Inhalte nur zur nicht-kommerziellen Nutzung. Quellen sind namentlich genannt, nicht hochgeladen.</p>
+  <p class="credit">Erstellt von Marc mit NotebookLM.</p>
+</footer>
+
+<script>
+document.getElementById('work-tabs').addEventListener('click', function (e) {
+  if (!e.target.classList.contains('tab')) return;
+  var id = e.target.dataset.work;
+  this.querySelectorAll('.tab').forEach(function (t) { t.classList.toggle('active', t === e.target); });
+  document.querySelectorAll('.work').forEach(function (w) { w.classList.toggle('active', w.id === id); });
+});
+</script>
+
+</body>
+</html>
